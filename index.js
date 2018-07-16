@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+﻿const Discord = require('discord.js');
 const client = new Discord.Client();
 const day = 86400000;
 
@@ -38,15 +38,14 @@ client.on('message', async message => {
 	await message.react('👍');
 	await message.react('👎');
   };
-  if (message.channel.name ==='refresher') {
-	  if (message.author.username === 'Jennifer Ryman') {
-		  message.channel.send("refresh")
-		setInterval(function(){
-			message.channel.send("refresh")
-		},280000);
-	  }
-  };
+if (message.channel.name === '') {
+	setInterval(() => {
+  		message.channel.send("Refreshed")
+	}, 280000);
+}
 });
+
+
 
 
 client.login('NDY4MDkxNzgzMzc3NTg0MTI4.Di5P3g._5JV4N2KKypg2kjaL0tRW9yTj0Y');
